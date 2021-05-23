@@ -41,16 +41,13 @@ class Login extends Component {
 
     loginClickHandler = () => {
         this.setState({ incorrectUsernamePassword: "dispNone" });
-        if(this.state.username === "") {
-            this.setState({ usernameRequired: "dispBlock" })
-        } else {
-            this.setState({ usernameRequired: "dispNone" });
-        }
-        if(this.state.password === "") {
-            this.setState({ passwordRequired: "dispBlock" })
-        } else {
-            this.setState({ passwordRequired: "dispNone" });
-        }
+
+        this.state.username === ""
+            ? this.setState({ usernameRequired: "dispBlock" })
+            : this.setState({ usernameRequired: "dispNone" });
+        this.state.password === ""
+            ? this.setState({ passwordRequired: "dispBlock" })
+            : this.setState({ passwordRequired: "dispNone" });
 
         if (this.state.username === "" || this.state.password === "") {
             return;
@@ -70,11 +67,12 @@ class Login extends Component {
             this.setState({ incorrectUsernamePassword: "dispBlock" });
         }
     }
-    PasswordChangeHandler = (e) => {
-        this.setState({ password: e.target.value })
-    }
+
     UsernameChangeHandler = (e) => {
         this.setState({ username: e.target.value })
+    }
+    PasswordChangeHandler = (e) => {
+        this.setState({ password: e.target.value })
     }
 
     render() {
@@ -102,5 +100,4 @@ class Login extends Component {
         )
     }
 }
-
 export default Login;
