@@ -1,3 +1,14 @@
+Course 7 - Project - ImageViewer 
+
+ImageViewer is a web application, which allows a user to view his/her own profile and the images posted by the user on his/her Instagram account. The app has been built for educational purposes only. 
+
+Information that cannot be fetched through public APIs has been hardcoded. 
+To login, use credentials - uname : siddharth | pwd: siddharth 
+
+Notes on working with npm were part of the initial stub and can be referred below. 
+
+---------------------------------------------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
